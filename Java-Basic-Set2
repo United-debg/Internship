@@ -107,3 +107,206 @@ public class ConditionOr {
 		
 		}
 }
+
+
+//Calculate Total Marks and Percentage....
+public class Marks {
+
+	public static void main(String[] args) {
+		int sub1=78;
+		int sub2= 45;
+		int sub3=62;
+		float totalMarks=sub1+sub2+sub3;
+		float percentage= (totalMarks *100)/300;
+		System.out.println("Total Marks is: "+totalMarks);
+		System.out.println("Percentage is: " + String.format("%.2f", percentage));
+		
+
+	}
+}
+
+// Swap two values with using third variable or without third variable....
+
+public class Swap {
+	int a=6;
+	int b=8;
+	 void swapThreeVariable() {
+		int temp;
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("Values of a & b after swaping is: " +a +" "+b );
+	}
+	 void swapTwoVariable() {
+		 	a = a + b;
+	        b = a - b;
+	        a = a - b;
+	        System.out.println("After swaping:" + " a = " + a + ", b = " + b);                    
+	 }
+	public static void main(String[] args) {
+		Swap obj1=new Swap();
+		obj1.swapThreeVariable();
+		obj1.swapTwoVariable();
+		
+
+	}
+}
+
+//Conver Farenheit to celcius....
+class fahrenheittocelsius {
+    
+    public static void main(String[] args)
+    {
+        double fahrenheit = 50.0, celsius = 0.0;
+        celsius = (fahrenheit - 32) / 1.8;
+        System.out.println("value of temperature in celsius:" + celsius);
+           
+    }
+}
+
+//Girls getting grade A...
+import java.util.*;
+class Grade{
+	public static void main(String arg[]){
+	int total=90;
+	int boys=45;
+	int girls =total-boys;
+	int A_grade=(90*50)/100;
+	int A_grade_girls=A_grade-20;
+	System.out.println("A grade girls are = "+A_grade_girls);
+	
+	}
+}
+
+//Sum of first and second last digit of a 5 digit...
+import java.util.Scanner;
+
+public class SumOfFirstAndLastDigit
+{
+	public static void main(String[] args) {
+		Scanner scan =  new Scanner(System.in);
+		System.out.print("Enter an integer number:: ");
+		int number = scan.nextInt();
+		int lastDigit, firstDigit, divisor;
+		int totalDigits = 0;
+		int sum = 0;
+		lastDigit = number%10;
+		int count = 0;
+		int  temp=number;
+		while(temp!=0) {
+			count++;
+			temp = temp/10;
+		}
+		divisor = (int)Math.pow(10, count-1);
+		firstDigit = number / divisor;
+		sum = firstDigit + lastDigit;
+		System.out.println("The sum of first & last"+" digit of the number "+number+" = "+ sum);
+		scan.close();
+	}
+}
+
+//Display a number whose digits are 2 greater than taken number...
+import java.util.*;
+class GreaterDigit
+{
+public static void main(String agr[]){
+   int n,a,b, c, d, sum,rev=0;
+    Scanner sc=new Scanner(System.in);
+    n=sc.nextInt();
+    a = (n/1000);    
+
+    if (a==8){
+       a=0;
+}
+    else if(a==9)
+    {
+     a=1;
+    }
+    else
+    {
+        a=a+2;
+    }
+    n = n%1000;
+    b = (n/100);  
+    if (b==8)
+    {
+     b=0;
+   }
+
+    else if(b==9)
+    {
+     b=1;
+    }
+    else
+    {
+     b=b+2;
+    }
+    n = n%100;
+    c = (n/10);  
+    if (c==8)
+    {
+        c=0;
+    }
+    else if(c==9)
+    {
+     c=1;
+    }
+    else
+    {
+      c=c+2;
+    }
+    d = (n%10);       
+    if (d==8)
+    {
+       d=0;
+    }
+    else if(d==9)
+    {
+     d=1;
+    }
+    else
+    {
+      d=d+2;
+    }
+  rev=((a*1000)+(b*100)+(c*10)+(d));
+    System.out.println(rev);    
+}
+}
+
+//Sum of digit of 3 number....
+import java.util.*;
+class SumOfDigit {
+ public static void main(String agr[])
+    {
+	Scanner sc=new Scanner(System.in);
+System.out.println("enter a number");
+int n=sc.nextInt();
+        int sum = 0;
+        while (n != 0) {
+            sum = sum + n % 10;
+            n = n / 10;
+        }
+ 
+        System.out.println("Sum of digits "+sum);
+    }
+}
+
+//Reverse 3 digit  number...
+import java.util.*;
+class Reverse{
+  public static void main(String[] args) {
+
+    int num, reversed = 0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a Number: " );
+num=sc.nextInt();
+    while(num != 0) {
+    
+      int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+
+    System.out.println("Reversed Number: " + reversed);
+  }
+}
